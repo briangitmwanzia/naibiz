@@ -1,0 +1,12 @@
+<p>Return <a href="http://127.0.0.1:8000/">Home</a>.</p>
+<p>Return <a href="http://127.0.0.1:8000/Client">Clients Page</a>.</p>
+{% load static %}
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<img src="{% static "images/sitelogo.png" %}" alt="Logo" />
+{% block content %}{% endblock %}
+</body>
+</html>

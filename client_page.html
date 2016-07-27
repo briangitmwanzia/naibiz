@@ -1,0 +1,15 @@
+<ul>Welcome. You are on the Client page.</ul>
+<ul>Return <a href="http://127.0.0.1:8000/">Home</a>.</ul>
+<ul>Here is a list of available businesses:</ul>
+
+<body>
+<ul>
+{% for bizname in biznames %}
+<ul>
+<li>
+<a href="http://127.0.0.1:8000/Client/{{ bizname.user.id }}">{{ bizname.name_of_enterprise }}</a>
+</li>
+</ul>
+{% endfor %}
+</ul>
+</body>

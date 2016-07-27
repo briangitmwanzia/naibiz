@@ -1,0 +1,21 @@
+{% if user.is_authenticated %}
+
+<ul>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">
+ADD
+</button>
+</form>
+</ul>
+
+<ul>
+<p>Return to <a href="/user">your profile</a>.</p>
+</ul>
+
+{% else %}
+<p>Please <a href="/accounts/login">Log in</a>first.</p>
+
+<p>Don't have an account? Just <a href="/accounts/register">Sign-up</a>.</p>
+{% endif %}

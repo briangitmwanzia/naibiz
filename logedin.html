@@ -1,0 +1,11 @@
+<p>Return <a href="http://127.0.0.1:8000/">Home</a>.</p>
+{% if user.is_authenticated %}
+<p>Welcome, <b><font color="#2FFF02">{{ user.username }}</font></b>.</p>
+
+<p> <a href="/add-content">Add </a>content to your bussiness profile.</p>
+
+<p> <a href="/accounts/logout">Log out</a>.</p>
+
+{% else %}
+<meta http-equiv="refresh" content="0;url=/accounts/login">
+{% endif %}
